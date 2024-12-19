@@ -1,10 +1,15 @@
 //Foreach Method
-// let obj = [
-//     {name : "sai",class : 12},
-//     {name : "shankar",class : 9},
-//     {name : "Venkat",class : 8},
+let obj = [
+    {name : "sai",class : 12},
+    {name : "shankar",class : 9},
+    {name : "Venkat",class : 8},
     
-// ];
+];
+let userTwo={
+    userName :"Shankar Neeli",
+    userAge: 26,
+    isLoggedIn: true
+}
 
 // // obj.forEach( (item)=>{console.log(`Item ${item.name} and its Values are ${item.class} `);
 // obj.forEach( (item)=>{console.log(item + "hi");
