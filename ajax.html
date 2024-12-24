@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch GitHub User Data</title>
+    <style>
+        .card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            text-align: center;
+        }
+        .followers {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+        <div class="card">
+            <span class="Photo"></span>
+            <h3 class="Name"></h3>
+            <span class="followers"></span>
+        </div>
+    </center>
+
+    <script>
+        let card = document.getElementsByClassName("card")[0];
+        let Name = document.getElementsByClassName("Name")[0];
+        let followers = document.getElementsByClassName("followers")[0];
+
+        let requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl);
+        xhr.onreadystatechange = function() {
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Parse the response to JSON
+                let data = JSON.parse(this.responseText);
+                console.log(typeof data);
+                console.log(data.followers);
+
+                // Set the data to the respective elements
+                Name.textContent = data.name; // Assuming there's a 'name' field in the API response
+                followers.textContent = `Followers: ${data.followers}`;
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
