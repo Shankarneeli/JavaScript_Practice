@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131;">
+
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    <script>
+        
+        // Lexical Scope
+
+        function outer(){
+            let name= "Shankar Neeli";
+            function Inner(){
+                console.log(name);
+                /* if u call any var which is out of its scope,it throws an error.
+                but if they call outer function's var to inner function,then it can be accessed.which is called 
+                LEXICAL SCOPING!!!! */
+            }
+            // Inner();
+        }
+        // outer();
+
+        // Closure
+        function Outer(){
+            let FirstName = "Neeli";
+            function displayName(){
+                console.log(FirstName);
+                
+            }
+            return displayName;
+            // in lexical scoping we can't access the outer function's Var, when inner Function passes return statement.
+        }
+        // let result = Outer(); // outerFunction returns innerFunction, creating a closure.
+        // result();
+
+        // Advanced Closures.
+
+        
+          // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+        
+    </script>
+</body>
+</html>
