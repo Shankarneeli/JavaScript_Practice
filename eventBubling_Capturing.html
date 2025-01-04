@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Bubling,Event Capturing & Event propagation</title>
+    </head>
+    <style>
+        div{
+            min-width: 100px;
+        min-height: 100px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <div id="GrandParent">GrandParent's Div
+        <div id="Parent">Parent's Div
+            <div id="Child">Child's Div</div>
+        </div>
+    </div>
+    <script>
+        /* 
+        addEventListener("event",function(){},eventPropagation); eventPropagation accepts only True/False. "false" is the default Value.
+        //If eventCapture === true,then event follows Bubbling Event(From Bottom to Top)
+        //if eventCapture === false,then event follows Capturing Event(From Top to bottom)
+*/
+        document.getElementById("GrandParent")
+        .addEventListener("click",(e)=>{
+            console.log("GrandParent Clicked");
+            // e.stopPropagation();
+            
+            
+        },true); 
+        document.getElementById("Parent")
+        .addEventListener("click",(e)=>{
+            console.log("Parent Clicked");
+            // e.stopPropagation();
+
+            
+        },true);
+        document.getElementById("Child")
+        .addEventListener("click",(e)=>{
+            console.log("Child Clicked");
+            // e.stopPropagation();
+            
+        },true);
+    </script>
+</body>
+</html>
