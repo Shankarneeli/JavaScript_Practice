@@ -4,7 +4,7 @@ Math.PI = 7;
 console.log(Math.PI);
 
 let result = Object.getOwnPropertyDescriptor(Math,'PI');
-console.log(result);
+// console.log(result);
 
 
 let obj ={
@@ -26,9 +26,9 @@ let descriptorKey3 = Object.getOwnPropertyDescriptor(obj,'isAvaialable');
 we cannot access all the key values of the Object at a time, only single key is allowed.
 */
 
-console.log(descriptorKey1);
-console.log(descriptorKey2);
-console.log(descriptorKey3);
+// console.log(descriptorKey1);
+// console.log(descriptorKey2);
+// console.log(descriptorKey3);
 
 //we can manually set the properties of our attributes by using  "Object.defineProperty()".
 
@@ -53,4 +53,10 @@ Object.defineProperty(obj,"userName",{
 });
 
 let descriptorTest = Object.getOwnPropertyDescriptor(obj,'userName');
-console.log(descriptorTest);//here we can see all the properties are false,as we manually changed above.
+// console.log(descriptorTest);//here we can see all the properties are false,as we manually changed above.
+
+//we can try getOwnPropertyDescriptor to Array like below.
+let A = ['Shankar','sai','bhargav'];
+let output = Object.getOwnPropertyDescriptor(A, '1'); // Accessing the property at index 1
+console.log(output);
+
