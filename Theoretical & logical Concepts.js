@@ -52,5 +52,3 @@ const formatter = new Intl.RelativeTimeFormat(locale,options);
 // console.log(formatter.format(3,'month'));
 // console.log(formatter.format(-1,'day'));
 // console.log(formatter.format(-10,'hour'));
-
-//Hoisting
