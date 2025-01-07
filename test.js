@@ -1,4 +1,3 @@
-console.log("Learn Js with Chai Aur Code !!!");
 
 /*1.when you convert string to number & print the value, we get - result as NaN.
 /*2.when you convert null to number & print the value, we get - result as 0.
@@ -19,19 +18,14 @@ console.log("Learn Js with Chai Aur Code !!!");
 // let max =24;
 // console.log(Math.floor(Math.random()*(max - min + 1)+ min));
 
-console.log(Array.from("Shankar")); //this string is converted into an individual array.bcz of "Array.from"
+// console.log(Array.from("Shankar")); //this string is converted into an individual array, bcz of "Array.from"
 
 var1 = 'bhargav';
 var2 = 'Venkat';
 var3 = 'sai';
 
-console.log(Array.of(var1,var2,var3,"Shankar")); 
-//this variables are merged into an array.bcz of "Array.of"
-
-
-
-
-
+// console.log(Array.of(var1,var2,var3,"Shankar")); 
+//this variables are merged into an array, bcz of "Array.of"
 
 
 // //Objects
@@ -48,3 +42,15 @@ console.log(Array.of(var1,var2,var3,"Shankar"));
 // console.log(obj["isLoggedIn"]); //Another way to print specific value from Object
 // console.log(obj[city]); //Only way to print specific symbol value.
 // Object.freeze(obj); //This isi used to freeze the object,so changes can't be done after this.
+
+
+// Printing Date with modern techniques
+
+const locale = 'en';
+const options = {numeric:'auto'};
+const formatter = new Intl.RelativeTimeFormat(locale,options);
+// console.log(formatter.format(3,'month'));
+// console.log(formatter.format(-1,'day'));
+// console.log(formatter.format(-10,'hour'));
+
+//Hoisting
