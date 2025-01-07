@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deBouncing Concept</title>
+</head>
+<body>
+    <input type="text" onkeyup="betterFunction()">
+    <script>
+        let counter = 0;
+        const getData= function(){
+            console.log("Fetching API...", counter++);
+        }
+        const debounce = function(Fun,Delay){
+            let timer;
+            return  function(){
+                let context = this,
+                args = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(()=>{
+                    getData.apply(context,arguments)
+                },Delay)
+            }
+        }
+        const betterFunction = debounce(getData,600);
+
+    </script>
+</body>
+</html>
