@@ -8,6 +8,15 @@
 <body>
     <input type="text" onkeyup="betterFunction()">
     <script>
+         /*
+        Debouncing in JavaScript is a programming technique used to limit the rate at which a function 
+        is executed. It is often used to improve performance and reduce unnecessary function calls.
+
+        Imagine you're typing into a search bar and the search function triggers every time 
+        you press a key. This can result in too many function calls, leading to performance issues. 
+        Debouncing ensures that the function is only called after a certain amount of time has passed 
+        since the last key press.
+        */
         let counter = 0;
         const getData= function(){
             console.log("Fetching API...", counter++);
