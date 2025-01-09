@@ -52,3 +52,26 @@ const formatter = new Intl.RelativeTimeFormat(locale,options);
 // console.log(formatter.format(3,'month'));
 // console.log(formatter.format(-1,'day'));
 // console.log(formatter.format(-10,'hour'));
+
+//Hoisting & Temporal Dead Zone
+
+// console.log(`1st Line ${newVar}`);
+// var newVar = 'Hi!!,Shankar..';
+let newVar = 'Hi!!,Shankar..';
+// console.log(`last Line ${newVar}`);
+
+// Temporal Dead Zone- when we declare a variable with (let or const),it is said to be in the TDZ from the start of the block 
+// until the variable is initialized.During this zone if u try to access the varaible,u will get "ReferenceError".
+
+// The TDZ helps ensure that variables are not used before they are properly declared and initialized, 
+// which can help prevent bugs in your code.
+
+
+//spread operator
+
+let a =[1,2,3,4];
+let b = [0,9,8,7,6];
+
+let c = [...a,...b];
+// let c = [a,b];
+console.log(c);
