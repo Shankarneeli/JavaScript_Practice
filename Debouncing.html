@@ -6,9 +6,13 @@
     <title>deBouncing Concept</title>
 </head>
 <body>
-    <input type="text" onkeyup="betterFunction()">
+    <input type="text" onkeyup="betterFunction()" autofocus>
     <script>
-         /*
+        /*
+        Throttling YouTube Link - https://youtu.be/81NGEXAaa3Y?si=c5JZ69tbeYB9De8M
+        Debouncing YouTube Link - https://youtu.be/Zo-6_qx8uxg?si=tcwwRsyNeekEXZnI
+        Debouncing & Throttling Theory YouTube Link - https://youtu.be/tJhA0DrH5co?si=oHuUPtAm6GipifEs
+        
         Debouncing in JavaScript is a programming technique used to limit the rate at which a function 
         is executed. It is often used to improve performance and reduce unnecessary function calls.
 
@@ -17,22 +21,29 @@
         Debouncing ensures that the function is only called after a certain amount of time has passed 
         since the last key press.
         */
-        let counter = 0;
         const getData= function(){
-            console.log("Fetching API...", counter++);
+            console.count("Fetching API...", );
         }
         const debounce = function(Fun,Delay){
             let timer;
             return  function(){
-                let context = this,
-                args = arguments;
-                clearTimeout(timer);
+             let context = this;
+            //  The this keyword refers to the context in which the function is executed.storing "this" keyword in
+            // context variable and using it in the apply method, ensures that getData function is called correctly.
+            
+             let args = arguments;
+            // The args variable is an array-like object that contains all the arguments.storing arguments in args as variable 
+            // and using it in the apply method, can ensure that the getData function is called with the correct arguments.
+
+             clearTimeout(timer);
+        // here Clearing the timeout is important, if not each tym a keyPressed a new SetTimeOut comes & 
+        // cancels the previous one.leads the function being executed multiple times.
                 timer = setTimeout(()=>{
-                    getData.apply(context,arguments)
+                    Fun.apply(context,args)
                 },Delay)
-            }
+            }   
         }
-        const betterFunction = debounce(getData,600);
+        const betterFunction = debounce(getData,400);
 
     </script>
 </body>
