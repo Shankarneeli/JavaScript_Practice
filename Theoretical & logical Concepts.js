@@ -75,3 +75,23 @@ let b = [0,9,8,7,6];
 let c = [...a,...b];
 // let c = [a,b];
 console.log(c);
+
+//Password strengthen code
+
+function checkPasswordStrength(password) {
+    let strength = 0;
+    if (password.length >= 8) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/[a-z]/.test(password)) strength++;
+    if (/[0-9]/.test(password)) strength++;
+    if (/[^A-Za-z0-9]/.test(password)) strength++;
+    
+    switch(strength) {
+        case 0: case 1: case 2: return '😱 Weak';
+        case 3: return '😐 Moderate';
+        case 4: return '😊 Strong';
+        case 5: return '💪 Very Strong';
+    }
+}
+
+console.log(checkPasswordStrength('P@ssw0rd'));
