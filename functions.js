@@ -28,7 +28,4 @@
 function fun(arr) {
     return arr.reverse();
 }
-console.log(fun([1,2,3,4,5]));
-
-
-
+// console.log(fun([1,2,3,4,5]));
