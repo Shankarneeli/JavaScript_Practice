@@ -34,7 +34,6 @@ let fun = function(){
 
 */
 
-
 Function.prototype.myBind = function(){
     console.log("sdfghj");
 }
@@ -42,8 +41,5 @@ Function.prototype.myBind = function(){
 
 let fun1= function (){
 }
-
 fun1.__proto__.myBind();
 //This is Prototype Inheritance...
-
-
