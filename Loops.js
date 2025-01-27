@@ -3,8 +3,7 @@ let obj = [
     {name : "sai",class : 12},
     {name : "shankar",class : 9},
     {name : "Venkat",class : 8},
-    
-];
+    ];
 let userTwo={
     userName :"Shankar Neeli",
     userAge: 26,
@@ -17,6 +16,7 @@ let userTwo={
 // numbers.forEach( (num)=>{console.log(num + 10)});
 
 //map()
+
 // let numbers = [1,2,3,4,5,6,7];
 // let newNum1 = numbers.map( (num)=> num + 10);
 // let newNum = numbers.map( (num)=>{return num + 10});
@@ -48,14 +48,15 @@ let newNum = numbers
 
 
 //for..of(works only with Arrays,strings,maps,sets.)
+
 // let arr = [1,2,3,4,5];
 // for(const r of arr){
 //     console.log(r);
-    
 // }
 
 
 //for..in(Works only with Arrays,Objects.)
+
 // let obj1={
 //     name:"sai",
 //     age:26
@@ -155,7 +156,7 @@ console.log(usernames);
 
 // Part 2
 
-// 1. Creating a function to return Ture/False for the  matching gender given below
+// 1. Creating a function to return Ture/False for the matching gender given below
 
 function filterByGender (users , userGender){
   let genarray = users.map((user) => {
