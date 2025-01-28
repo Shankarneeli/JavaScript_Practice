@@ -4,6 +4,14 @@
 /*3.when you convert undefined to number & print the value, we get - result as NaN.
 /*4.when you convert true to number & print the value, we get - result as 1.
 /*5.when you convert false to number & print the value, we get - result as 0.
+
+console.log(typeof(NaN));
+console.log(typeof(null));
+console.log(typeof(undefined));
+console.log(typeof(Boolean));
+console.log(typeof(String));
+console.log(typeof(function(){}));
+console.log(typeof(Object));
 */
 
 // let str = new String("Hello-merey-Bhai-logon");
