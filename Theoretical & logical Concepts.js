@@ -1,7 +1,20 @@
+/*1.when you convert string to number & print the value, we get - result as NaN. 
+let str = "abc";
+let num = Number(str); // num will be NaN
 
-/*1.when you convert string to number & print the value, we get - result as NaN.
+let str = "abc";
+let num = +str; // num will be NaN
+
 /*2.when you convert null to number & print the value, we get - result as 0.
+let num = Number(null); // num will be 0
+
+let num = +null; // num will be 0
+
 /*3.when you convert undefined to number & print the value, we get - result as NaN.
+let num = Number(undefined); // num will be NaN
+
+let num = +undefined; // num will be NaN
+
 /*4.when you convert true to number & print the value, we get - result as 1.
 /*5.when you convert false to number & print the value, we get - result as 0.
 
