@@ -35,8 +35,3 @@ let originalArray = [1,2,{a:10,b:20},[44,60,70]];
 // deepCopy1[2].a=100;
 // console.log(originalArray);
 // console.log(deepCopy1);
-
-
-
-
-
