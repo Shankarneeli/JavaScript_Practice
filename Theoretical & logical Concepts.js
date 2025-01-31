@@ -116,3 +116,6 @@ function checkPasswordStrength(password) {
 }
 
 console.log(checkPasswordStrength('P@ssw0rd'));
+
+
+// Learn about getBoundingClientRect() in DOM****
