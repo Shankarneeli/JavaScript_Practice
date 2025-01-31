@@ -1,19 +1,16 @@
-
 class Student {
     constructor(studentName,standard,rollNo) {
         this.studentName=studentName;
         this.standard=standard;
-        this.rollNo=rollNo;
-        
+        this.rollNo=rollNo;   
     }
 
     //a Method/Function is declared in this way.
-    classMonitor(){
+classMonitor(){
         return `${this.studentName} will be our new Class Monitor this Year for class ${this.standard}`;
     }
 
-
-    firstRank(){
+firstRank(){
         return `Rollno ${this.rollNo} scored highest score for this Halfyearly Exams.`
     }
 }
@@ -46,9 +43,7 @@ console.log(two instanceof Student);
 console.log(one instanceof Student);
 
 
-
 //Static property
-
 class TeaTime{
     constructor(teaMaster){
         this.teaMaster = teaMaster;
