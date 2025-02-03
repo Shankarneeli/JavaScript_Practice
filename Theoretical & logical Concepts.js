@@ -114,8 +114,21 @@ function checkPasswordStrength(password) {
         case 5: return '💪 Very Strong';
     }
 }
-
 console.log(checkPasswordStrength('P@ssw0rd'));
 
+//Write code that array returns only even number.
+function findEvenNumbers(arr) {
+ const result = [];
+ for (let i = 0; i < arr.length; i++) {
+ if (arr[i] % 2 === 0) {
+ result.push(arr[i]); 
+ // Add even numbers to the result array
+ }
+ }
+ return result;
+}
+// Example usage:
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8,-8,19, 9, 10];
+console.log("Even numbers:", findEvenNumbers(numbers));
 
 // Learn about getBoundingClientRect() in DOM****
