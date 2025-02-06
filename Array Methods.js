@@ -285,6 +285,7 @@ function secondLargeArray(arr){
 // console.log(secondLargeArray([10,5,10]));
 
 
+
 //Optimised way of solving the Above question with Time Complexity\
 
 function secondLargaestOptimised(arr){
@@ -305,4 +306,4 @@ function secondLargaestOptimised(arr){
     return secondLargest;
 }
 // console.log(secondLargaestOptimised([10,2,36,15,26,36,35]));
-// console.log(secondLargaestOptimised([10,5,10]));
+// console.log(secondLargaestOptimised([10,5,10]));
