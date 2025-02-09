@@ -34,8 +34,7 @@
     <script>
         let card = document.getElementsByClassName("card")[0];
         let Name = document.getElementsByClassName("Name")[0];
-        let followers = document.getElementsByClassName("followers")[0];
-
+        let followers = document.getElementsByClassName("followers")[0];
         let requestUrl = 'https://api.github.com/users/hiteshchoudhary';
         let xhr = new XMLHttpRequest();
         xhr.open('GET', requestUrl);
@@ -54,5 +53,6 @@
         }
         xhr.send();
     </script>
+
 </body>
 </html>
