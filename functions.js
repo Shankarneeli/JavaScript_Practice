@@ -11,6 +11,7 @@
 // console.log(ex);
 
 
+
 // function one(){
 //     let lastName = "Shankar";
 
@@ -23,6 +24,7 @@
 //     two()
 // }
 // one()
+
 
 
 function fun(arr) {
