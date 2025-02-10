@@ -33,7 +33,4 @@ let calculatingVolumeWithLength = calculatingVolume.bind(null,5);
 
 console.log(calculatingVolume(2,5));
 // or
-console.log(calculatingVolumeWithLength(5));
-
-
-
+console.log(calculatingVolumeWithLength(5));
