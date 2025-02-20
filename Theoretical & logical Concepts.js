@@ -131,4 +131,9 @@ function findEvenNumbers(arr) {
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8,-8,19, 9, 10];
 console.log("Even numbers:", findEvenNumbers(numbers));
 
+//we can change the title of any website using this logic in JS.
+let val = 7;
+document.title = `(${val}) | Shankar Neeli`;
+
+
 // Learn about getBoundingClientRect() in DOM****
