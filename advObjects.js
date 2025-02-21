@@ -45,6 +45,7 @@ Object.defineProperty(obj,"userName",{
     If enumerable: true, the property will be included in loops that enumerate properties.
     If enumerable: false, the property will be ignored in such loops. */
 
+
     configurable: false 
     /*Configurable attribute determines if a property can be deleted from the object and if its attributes(like writable, enumerable) 
     can be modified.
@@ -52,8 +53,11 @@ Object.defineProperty(obj,"userName",{
     If configurable: false, the property cannot be deleted, and its attributes are locked. */ 
 });
 
+
 let descriptorTest = Object.getOwnPropertyDescriptor(obj,'userName');
+
 // console.log(descriptorTest);//here we can see all the properties are false,as we manually changed above.
+
 
 //we can try getOwnPropertyDescriptor to Array like below.
 let A = ['Shankar','sai','bhargav'];
