@@ -29,17 +29,8 @@ let originalArray = [1,2,{a:10,b:20},[44,60,70]];
 // console.log(originalArray);
 // console.log(deepCopy);
 
-
 // let deepCopy1 = structuredClone(originalArray); //2nd Way
 // deepCopy1[3][2]=10;
 // deepCopy1[2].a=100;
 // console.log(originalArray);
 // console.log(deepCopy1);
-
-
-
-
-
-
-
-
