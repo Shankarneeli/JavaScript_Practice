@@ -306,4 +306,4 @@ function secondLargaestOptimised(arr){
     return secondLargest;
 }
 // console.log(secondLargaestOptimised([10,2,36,15,26,36,35]));
-// console.log(secondLargaestOptimised([10,5,10]));
+// console.log(secondLargaestOptimised([10,5,10]));
