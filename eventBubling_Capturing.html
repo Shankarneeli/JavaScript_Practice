@@ -22,8 +22,8 @@
     <script>
         /* 
         addEventListener("event",function(){},eventPropagation); eventPropagation accepts only True/False. "false" is the default Value.
-        //If eventCapture === true,then event follows Bubbling Event(From Bottom to Top)
-        //if eventCapture === false,then event follows Capturing Event(From Top to bottom)
+        //If eventCapture === false(by Default),then event follows Bubbling Event(From Bottom to Top)
+        //if eventCapture ===True ,then event follows Capturing Event(From Top to bottom)
 */
         document.getElementById("GrandParent")
         .addEventListener("click",(e)=>{
