@@ -26,7 +26,8 @@ console.log(mulArr);
         let temp = [];
         for (let i = 0; i < this.length; i++) {
             if(cb(this[i],i,this)){
-                temp.push(this[i]);
+                temp.push(this[i]); 
+                // we don't have to add index & array in here, bcz in filter method it return only values which satisfies the condition
             }            
         }
         return temp;
@@ -44,14 +45,22 @@ console.log(evenNums);
 // -----------------------------------------------------------------------------
 //Polyfill for reduce()- Array.reduce((arr,curr,i,arr)=>{},initialValue);
 
-Array.prototype.myReduce = function(cb,initialValue){
-    var accumulator = initialValue;
+Array.prototype.myReduce = function(cb, initialValue) {
+    let accumulator = initialValue;
+    let startIndex = 0;
 
-    for (let i = 0; i < this.length; i++) {
-        accumulator = accumulator?cb(accumulator,this[i],this) : this[i] ;
+    // If no initial value is provided, use the first element as the accumulator
+    if (accumulator === undefined) {
+        accumulator = this[0];
+        startIndex = 1; // Start from the second element
     }
+
+    for (let i = startIndex; i < this.length; i++) {
+        accumulator = cb(accumulator, this[i], i, this);
+    }
+
     return accumulator;
-}
+};
 
 let numbers =[1,2,3,4,5,6,7,8,9];
 
