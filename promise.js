@@ -8,8 +8,31 @@ setTimeout(function(){
 promiseOne.then(function(){
     console.log("& Resolved succesfully!");
 });
+//another Way of Writing PROMISE
 
-//2nd Way of Writing PROMISE
+let pro = new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    console.log("SetTimeout called");
+
+    let success = Math.random() > 0.5; // Randomly decide success or failure
+
+    if (success) {
+      resolve();
+    } else {
+      reject("❌ Rejected due to an error!");
+    }
+  }, 1000);
+});
+
+pro
+  .then(function () {
+    console.log("✅ Resolved successfully!");
+  })
+  .catch(function (error) {
+    console.error(error);
+  });
+
+//another Way of Writing PROMISE
 new Promise(function (resolve,reject){
     setTimeout(function(){
             console.log("promiseTwo is excuted");
