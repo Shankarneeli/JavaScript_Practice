@@ -25,6 +25,30 @@ console.log(typeof(Boolean));
 console.log(typeof(String));
 console.log(typeof(function(){}));
 console.log(typeof(Object));
+
+typeof(NaN) = Number
+typeof(null) = Object
+typeof(undefined) = undefined
+typeof(Boolean) = function, Capital letter B is for constructor function.
+typeof(true/false) = boolean
+typeof(String) = function, Capital letter S is for constructor function.
+typeof(Object) = function, Object is a Built-in constructor function.
+typeof(function(){}) = function, Functions are actually objects, but typeof specifically returns "function".
+
+
+
+Comparisons In Detail
+
+1. *Primitive Data Types (Numbers, Strings, Booleans):*
+   - Using == (loose equality), it checks if the values of a and b are the same.
+   - With === (strict equality), it checks if a and b have the same value and the same data type.
+
+2. *Non-Primitive Data Types (Objects, Arrays):*
+   - == checks if a and b reference the same memory location, then true.
+   - === also checks for reference equality, ensuring a and b are from the same memory location. 
+In non-primitive data type both loose comparison & Strict comparison are same.
+
+
 */
 
 // let str = new String("Hello-merey-Bhai-logon");
